@@ -1,0 +1,285 @@
+/* article header p{
+  font-style: italic;
+}
+*/
+
+/* 
+- To make some fake text, use the word lorem to place them.
+- Using floats is kinda outdated.
+-Colors in RGBA(for transparency are like
+  rgba(0, 255, 255, 0.3)) 
+- Use clearfix hack to fix collapsing of floats.
+- while in Hexadecimal are like #00ffff.
+- Text color can use #444444 or rgb(69, 69, 69) or rgba(69, 69, 69, 0.8).
+- When all colors are identical, just do #0ff.
+- You can use the VS Code Color Picker to get the color code you want.
+- Styles that are inherited by a parent element are only ones that text-related, such as color, font-family, font-size, font-style, font-weight, text-transform, line-height, etc.
+- Also remember that parent inherited styles can be overridden by child element styles. For example, if the body has a color of red, but the h2 has a color of blue, then the h2 will be blue and not red. This is because the h2 is overriding the body color.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin-right: 0px;
+  margin-top: 0;
+  margin: 0;
+  /* width: 1200px; */
+}
+
+.main,
+h2,
+h3,
+p,
+li {
+  font-family: sans-serif;
+}
+
+.main,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+.main {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  /* font-style: italic; */
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  margin: 10px;
+  font-size: 30px;
+}
+
+p {
+  color: #444;
+  font-size: 20px;
+  /* margin-left: 10px; */
+  margin-right: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+li {
+  color: #444;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.opening-block {
+  background-color: #f7f7f7;
+  /* margin-top: 0px;
+  margin-left: 0px;
+  /* margin-right: 0px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top: 15px solid #1098ad;
+  /* width: auto; */
+}
+
+.highlight {
+  color: black;
+  font-size: 20px;
+  padding: 2px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: yellow;
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  z-index: 1;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+article {
+  position: relative;
+  width: 800px;
+  /* float: left; */
+}
+
+aside {
+  width: 450px;
+  border-top: 8px solid #1098ad;
+  border-bottom: 8px solid #1098ad;
+  /* margin-right: 20px; */
+  align-self: flex-start;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+footer {
+  clear: both;
+}
+
+.related-author {
+  font-size: 14px;
+  font-style: italic;
+  /* font-style: italic; */
+}
+
+.related-posts-list {
+  list-style: none;
+  margin-left: 0;
+  padding-inline-start: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color: #f4f4f4;
+}
+
+.related-post-link {
+  /* padding-left: 20px; */
+  margin-left: 10px;
+}
+
+.html-code {
+  max-width: 100%;
+  height: auto;
+}
+.main-header {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.middle {
+  text-align: center;
+}
+
+/* li:nth-child(even) {
+  font-weight: bold;
+} */
+/* This will not work */
+/* article p:first-child {
+  color: red;
+} */
+/* Styling links */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:hover {
+  /* color: #1098ad; */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(105, 105, 105);
+  font-style: italic;
+}
+
+/* resolving conficts */
+/* .copyright {
+  color: blue;
+}
+.text {
+  color: red;
+} */
+
+#copyright {
+  font-size: 16px;
+}
+
+nav a:link {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+/* FLOATS */
+
+/* .author-image {
+  float: left;
+  margin-bottom: 4px;
+}
+
+.author {
+  float: left;
+  font-style: italic;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+h1 {
+  float: left;
+}
+
+aside{
+float: right;}
+
+nav {
+  float: right;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: "";
+  display: block;
+} */
+
+/* Flex Box */
+
+.opening-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  margin-left: 20px;
+  width: 50px;
+}
+.related-image {
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.author {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.related-posts {
+  display: flex;
+
+  /* flex: 0 1 auto; */
+}
+
+.fcontainer {
+  display: flex;
+  gap: 75px;
+}
+
+.related-author {
+  margin-left: 10px;
+}
